@@ -3,6 +3,8 @@ const express = require('express')
 const massive = require('massive')
 const session = require('express-session')
 
+const authCtrl = require('./controllers/authController')
+
 const chalk = require('chalk')
 
 const { SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
@@ -18,9 +20,9 @@ app.use(session({
 
 // AUTH ENDPOINTS
 app.post('/auth/register', authCtrl.register)
-// app.post('/auth/login', authCtrl.login)
-// app.delete('/auth/logout', authCtrl.logout)
-// app.get('/auth/me', authCtrl.getUserInfo)
+app.post('/auth/login', authCtrl.login)
+app.delete('/auth/logout', authCtrl.logout)
+app.get('/auth/me', authCtrl.userInfo)
 
 massive(CONNECTION_STRING)
   .then(db => {

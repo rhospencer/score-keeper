@@ -1,0 +1,23 @@
+$primary-color:#10A6D0; 
+$secondary-color: #342666;
+$primary-background: #232931;
+$secondary-background: #C5C6C7;
+
+@mixin flex-row($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column($justify, $align) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin window($background) {
+    height: 100vh;
+    width: 100vw;
+    background: $background
+}

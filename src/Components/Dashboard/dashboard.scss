@@ -1,0 +1,29 @@
+.dashboard {
+    @include window($primary-background);
+    @include flex-row(center, center);
+}
+
+.login-holder {
+    @include flex-column(center, center);
+    height: 30%;
+    width: 50%;
+    background: $secondary-background;
+    border-radius: 10px;
+    .login-title {
+        height: 20%;
+        width: 100%;
+        @include flex-column(center, center);
+        background: $secondary-color;
+        color: $primary-color;
+    }
+    .login-input-holder {
+        height: 60%;
+        width: 100%;
+        @include flex-column(center, center);
+    }
+    .login-button-holder {
+        height: 20%;
+        width: 100%;
+        @include flex-row(center, center);
+    }
+}

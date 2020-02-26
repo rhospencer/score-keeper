@@ -38,7 +38,7 @@ db.once('open', function() {
 massive(CONNECTION_STRING)
   .then(db => {
     app.set("db", db);
-    console.log(chalk.cyan('db connected'))
+    console.log(chalk.cyan('postgresql db connected'))
     app.listen(SERVER_PORT, () => console.log(chalk.green(`Listening on port ${SERVER_PORT}`)))
   })
   .catch(err => console.log(chalk.red(err)));

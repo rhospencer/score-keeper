@@ -6,9 +6,9 @@
 .login-holder {
     @include flex-column(center, center);
     @include box-shadow;
-    height: 30%;
-    width: 50%;
-    background: $secondary-background;
+    height: 40%;
+    width: 60%;
+    background: $primary-background;
     border-radius: 10px;
     .login-title {
         height: 20%;
@@ -16,6 +16,9 @@
         @include flex-column(center, center);
         background: $secondary-color;
         color: $primary-color;
+        h1 {
+            font-size: 1.5rem;
+        }
     }
     .auth-holder {
         width: 80%;
@@ -25,11 +28,70 @@
             height: 75%;
             width: 100%;
             @include flex-column(space-evenly, center);
+            input {
+                width: 100%;
+                border: 0;
+                border-bottom: 2px solid $secondary-background;
+                font-size: 1rem;
+                color: $secondary-background;
+                padding: 7px 0;
+                background: transparent;
+                transition: border-color 1s, color 1s;
+                outline: none;
+                &::placeholder {
+                    color: $secondary-background;
+                    opacity: 1;
+                    transition: color 1s;
+                }
+                &:focus {
+                    transition: 0.2s;
+                    font-size: 1rem;
+                    color: $primary-color;
+                    font-weight:700;
+                    padding-bottom: 6px;  
+                    border-image: linear-gradient(to right, $primary-color,$secondary-color,$primary-color);
+                    border-image-slice: 1;
+                    &::placeholder {
+                        color: $primary-color;
+                    }
+                }
+            }
         }
         .login-button-holder {
             height: 25%;
             width: 100%;
             @include flex-row(center, center);
+        }
+    }
+
+    .register-input-holder {
+        input {
+            width: 100%;
+            border: 0;
+            border-bottom: 2px solid $secondary-background;
+            font-size: .8rem;
+            color: $secondary-background;
+            padding: 7px 0;
+            background: transparent;
+            transition: border-color 1s, color 1s;
+            outline: none;
+            &::placeholder {
+                color: $secondary-background;
+                opacity: 1;
+                transition: color 1s;
+            }
+            &:focus {
+                transition: 0.2s;
+                font-size: .8rem;
+                color: $primary-color;
+                font-weight:700;
+                padding-bottom: 6px;  
+                border-image: linear-gradient(to right, $primary-color,$secondary-color,$primary-color);
+                border-image-slice: 1;
+                &::placeholder {
+                    color: $primary-color;
+                }
+            }
         }
     }
 }

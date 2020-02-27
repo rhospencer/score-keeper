@@ -1,6 +1,10 @@
 @import "./variables.scss";
 @import "./Components/Dashboard/dashboard.scss";
 @import "./Components/Home/home.scss";
+@import "./Components/Nav/nav.scss";
+@import "./Components/HostGame/host-game.scss";
+@import "./Components/JoinGame/join-game.scss";
+@import "./Components/ActiveGames/active-games.scss";
 
 * {
     box-sizing: border-box;

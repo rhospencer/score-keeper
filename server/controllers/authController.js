@@ -5,8 +5,6 @@ module.exports = {
         const db = req.app.get('db')
         const {username, password, f_name, l_name} = req.body
 
-        console.log(req.body)
-
         const user = await db.find_username(username)
         if (user[0]) return res.status(200).send({message: {text: 'Username already in use.', icon: 'warning'}})
 

@@ -13,7 +13,7 @@ export default function Home(props) {
     })
     return(
         <div className="home-holder">
-            <Nav />
+            <Nav props={props}/>
             <div className="home">
                 Home
             </div>

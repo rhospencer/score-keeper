@@ -3,7 +3,6 @@ import axios from 'axios';
 import {updateUser} from '../../ducks/reducer'
 import {useSelector, useDispatch} from 'react-redux';
 import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
 
 export default function Dashboard(props) {
     const [username, setUsername] = useState('');
@@ -12,10 +11,8 @@ export default function Dashboard(props) {
     const [f_name, setF_name] = useState('');
     const [l_name, setL_name] = useState('');
     const [register, setRegister] = useState(false);
-    const reduxState = useSelector(state => state);
+    // const reduxState = useSelector(state => state);
     const dispatch = useDispatch();
-
-    console.log(reduxState)
 
     const login = async () => {
         const res = await axios.post('/auth/login', {username, password})
@@ -48,7 +45,6 @@ export default function Dashboard(props) {
                 })
             }
             let user = {user: {user_id: res.data.user.user_id, username: res.data.user.username}, loggedIn: res.data.loggedIn }
-            console.log(user)
             dispatch(updateUser(user))
             Swal.fire({
                 text: res.data.message.text,
@@ -98,9 +94,7 @@ export default function Dashboard(props) {
                         </div>
                         <div className="login-button-holder">
                             <button onClick={handleRegisterChange}>Register</button>
-                            {/* <Link to={'/home'}> */}
                                 <button onClick={login}>Sign In</button>
-                            {/* </Link> */}
                         </div>
                     </div>
                     :

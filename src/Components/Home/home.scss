@@ -1,0 +1,10 @@
+.home-holder {
+    @include window($primary-background);
+    @include flex-column(center, center);
+}
+
+.home {
+    height: 90%;
+    width: 100%;
+}
+

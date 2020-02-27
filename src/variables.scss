@@ -21,3 +21,8 @@ $secondary-background: #C5C6C7;
     width: 100vw;
     background: $background
 }
+
+@mixin box-shadow {
+    -webkit-box-shadow: 5px 5px 9px 3px #0b0c10; 
+    box-shadow: 5px 5px 9px 3px #0b0c10;
+}

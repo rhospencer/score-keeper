@@ -1,8 +1,17 @@
 @import "./variables.scss";
 @import "./Components/Dashboard/dashboard.scss";
+@import "./Components/Home/home.scss";
 
 * {
     box-sizing: border-box;
     margin: 0;
     overflow-x: hidden;
+}
+
+.swal2-icon {
+    width: 5em !important;
+    height: 5em !important;
+    border-width: .25em !important;
+    overflow: hidden !important;
+    
 }

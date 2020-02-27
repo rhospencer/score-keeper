@@ -5,6 +5,7 @@
 
 .login-holder {
     @include flex-column(center, center);
+    @include box-shadow;
     height: 30%;
     width: 50%;
     background: $secondary-background;
@@ -16,14 +17,19 @@
         background: $secondary-color;
         color: $primary-color;
     }
-    .login-input-holder {
-        height: 60%;
-        width: 100%;
+    .auth-holder {
+        width: 80%;
+        height: 100%;
         @include flex-column(center, center);
-    }
-    .login-button-holder {
-        height: 20%;
-        width: 100%;
-        @include flex-row(center, center);
+        .login-input-holder {
+            height: 75%;
+            width: 100%;
+            @include flex-column(space-evenly, center);
+        }
+        .login-button-holder {
+            height: 25%;
+            width: 100%;
+            @include flex-row(center, center);
+        }
     }
 }
